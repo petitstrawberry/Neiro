@@ -1,0 +1,16 @@
+PODS:
+  - upnpx (1.4.3)
+
+DEPENDENCIES:
+  - upnpx
+
+SPEC REPOS:
+  trunk:
+    - upnpx
+
+SPEC CHECKSUMS:
+  upnpx: ad8791295befdc0a0702089daf067d21c76194fc
+
+PODFILE CHECKSUM: 5d075e685a2378030fcc875941ad11ec083523df
+
+COCOAPODS: 1.10.2

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var discoverUPnP: DiscoverUPnP
+    
     var body: some View {
         VStack {
             NavigationView {
