@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FA93DC026DB3327004A0514 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DBF26DB3327004A0514 /* Tests_iOS.swift */; };
+		6FA93DCB26DB3327004A0514 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DCA26DB3327004A0514 /* Tests_macOS.swift */; };
+		6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA426DB3326004A0514 /* NeiroApp.swift */; };
+		6FA93DCE26DB3327004A0514 /* NeiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA426DB3326004A0514 /* NeiroApp.swift */; };
+		6FA93DCF26DB3327004A0514 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA526DB3326004A0514 /* ContentView.swift */; };
+		6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA526DB3326004A0514 /* ContentView.swift */; };
+		6FA93DD126DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
+		6FA93DD226DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FA93DBC26DB3327004A0514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FA93D9F26DB3325004A0514 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FA93DAA26DB3327004A0514;
+			remoteInfo = "Neiro (iOS)";
+		};
+		6FA93DC726DB3327004A0514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FA93D9F26DB3325004A0514 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FA93DB226DB3327004A0514;
+			remoteInfo = "Neiro (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FA93DA426DB3326004A0514 /* NeiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeiroApp.swift; sourceTree = "<group>"; };
+		6FA93DA526DB3326004A0514 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FA93DA626DB3327004A0514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FA93DAB26DB3327004A0514 /* Neiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA93DAE26DB3327004A0514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA93DB326DB3327004A0514 /* Neiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA93DB526DB3327004A0514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA93DB626DB3327004A0514 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		6FA93DBB26DB3327004A0514 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA93DBF26DB3327004A0514 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		6FA93DC126DB3327004A0514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA93DC626DB3327004A0514 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA93DCA26DB3327004A0514 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		6FA93DCC26DB3327004A0514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FA93DA826DB3327004A0514 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DB026DB3327004A0514 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DB826DB3327004A0514 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DC326DB3327004A0514 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FA93D9E26DB3325004A0514 = {
+			isa = PBXGroup;
+			children = (
+				6FA93DA326DB3326004A0514 /* Shared */,
+				6FA93DAD26DB3327004A0514 /* iOS */,
+				6FA93DB426DB3327004A0514 /* macOS */,
+				6FA93DBE26DB3327004A0514 /* Tests iOS */,
+				6FA93DC926DB3327004A0514 /* Tests macOS */,
+				6FA93DAC26DB3327004A0514 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FA93DA326DB3326004A0514 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DA426DB3326004A0514 /* NeiroApp.swift */,
+				6FA93DA526DB3326004A0514 /* ContentView.swift */,
+				6FA93DA626DB3327004A0514 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		6FA93DAC26DB3327004A0514 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DAB26DB3327004A0514 /* Neiro.app */,
+				6FA93DB326DB3327004A0514 /* Neiro.app */,
+				6FA93DBB26DB3327004A0514 /* Tests iOS.xctest */,
+				6FA93DC626DB3327004A0514 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FA93DAD26DB3327004A0514 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DAE26DB3327004A0514 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		6FA93DB426DB3327004A0514 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DB526DB3327004A0514 /* Info.plist */,
+				6FA93DB626DB3327004A0514 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		6FA93DBE26DB3327004A0514 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DBF26DB3327004A0514 /* Tests_iOS.swift */,
+				6FA93DC126DB3327004A0514 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		6FA93DC926DB3327004A0514 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DCA26DB3327004A0514 /* Tests_macOS.swift */,
+				6FA93DCC26DB3327004A0514 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FA93DAA26DB3327004A0514 /* Neiro (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FA93DD526DB3327004A0514 /* Build configuration list for PBXNativeTarget "Neiro (iOS)" */;
+			buildPhases = (
+				6FA93DA726DB3327004A0514 /* Sources */,
+				6FA93DA826DB3327004A0514 /* Frameworks */,
+				6FA93DA926DB3327004A0514 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Neiro (iOS)";
+			productName = "Neiro (iOS)";
+			productReference = 6FA93DAB26DB3327004A0514 /* Neiro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FA93DB226DB3327004A0514 /* Neiro (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FA93DD826DB3327004A0514 /* Build configuration list for PBXNativeTarget "Neiro (macOS)" */;
+			buildPhases = (
+				6FA93DAF26DB3327004A0514 /* Sources */,
+				6FA93DB026DB3327004A0514 /* Frameworks */,
+				6FA93DB126DB3327004A0514 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Neiro (macOS)";
+			productName = "Neiro (macOS)";
+			productReference = 6FA93DB326DB3327004A0514 /* Neiro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FA93DBA26DB3327004A0514 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FA93DDB26DB3327004A0514 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				6FA93DB726DB3327004A0514 /* Sources */,
+				6FA93DB826DB3327004A0514 /* Frameworks */,
+				6FA93DB926DB3327004A0514 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FA93DBD26DB3327004A0514 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 6FA93DBB26DB3327004A0514 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6FA93DC526DB3327004A0514 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FA93DDE26DB3327004A0514 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				6FA93DC226DB3327004A0514 /* Sources */,
+				6FA93DC326DB3327004A0514 /* Frameworks */,
+				6FA93DC426DB3327004A0514 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FA93DC826DB3327004A0514 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 6FA93DC626DB3327004A0514 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FA93D9F26DB3325004A0514 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					6FA93DAA26DB3327004A0514 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					6FA93DB226DB3327004A0514 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					6FA93DBA26DB3327004A0514 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 6FA93DAA26DB3327004A0514;
+					};
+					6FA93DC526DB3327004A0514 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 6FA93DB226DB3327004A0514;
+					};
+				};
+			};
+			buildConfigurationList = 6FA93DA226DB3325004A0514 /* Build configuration list for PBXProject "Neiro" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FA93D9E26DB3325004A0514;
+			productRefGroup = 6FA93DAC26DB3327004A0514 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FA93DAA26DB3327004A0514 /* Neiro (iOS) */,
+				6FA93DB226DB3327004A0514 /* Neiro (macOS) */,
+				6FA93DBA26DB3327004A0514 /* Tests iOS */,
+				6FA93DC526DB3327004A0514 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FA93DA926DB3327004A0514 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA93DD126DB3327004A0514 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DB126DB3327004A0514 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA93DD226DB3327004A0514 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DB926DB3327004A0514 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DC426DB3327004A0514 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FA93DA726DB3327004A0514 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA93DCF26DB3327004A0514 /* ContentView.swift in Sources */,
+				6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DAF26DB3327004A0514 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */,
+				6FA93DCE26DB3327004A0514 /* NeiroApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DB726DB3327004A0514 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA93DC026DB3327004A0514 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA93DC226DB3327004A0514 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA93DCB26DB3327004A0514 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FA93DBD26DB3327004A0514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FA93DAA26DB3327004A0514 /* Neiro (iOS) */;
+			targetProxy = 6FA93DBC26DB3327004A0514 /* PBXContainerItemProxy */;
+		};
+		6FA93DC826DB3327004A0514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FA93DB226DB3327004A0514 /* Neiro (macOS) */;
+			targetProxy = 6FA93DC726DB3327004A0514 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6FA93DD326DB3327004A0514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6FA93DD426DB3327004A0514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6FA93DD626DB3327004A0514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.petitstb.Neiro;
+				PRODUCT_NAME = Neiro;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FA93DD726DB3327004A0514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.petitstb.Neiro;
+				PRODUCT_NAME = Neiro;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FA93DD926DB3327004A0514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petitstb.Neiro;
+				PRODUCT_NAME = Neiro;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6FA93DDA26DB3327004A0514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petitstb.Neiro;
+				PRODUCT_NAME = Neiro;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6FA93DDC26DB3327004A0514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.petitstb.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Neiro (iOS)";
+			};
+			name = Debug;
+		};
+		6FA93DDD26DB3327004A0514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.petitstb.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Neiro (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FA93DDF26DB3327004A0514 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.petitstb.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Neiro (macOS)";
+			};
+			name = Debug;
+		};
+		6FA93DE026DB3327004A0514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4349453P3R;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.petitstb.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Neiro (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FA93DA226DB3325004A0514 /* Build configuration list for PBXProject "Neiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FA93DD326DB3327004A0514 /* Debug */,
+				6FA93DD426DB3327004A0514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FA93DD526DB3327004A0514 /* Build configuration list for PBXNativeTarget "Neiro (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FA93DD626DB3327004A0514 /* Debug */,
+				6FA93DD726DB3327004A0514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FA93DD826DB3327004A0514 /* Build configuration list for PBXNativeTarget "Neiro (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FA93DD926DB3327004A0514 /* Debug */,
+				6FA93DDA26DB3327004A0514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FA93DDB26DB3327004A0514 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FA93DDC26DB3327004A0514 /* Debug */,
+				6FA93DDD26DB3327004A0514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FA93DDE26DB3327004A0514 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FA93DDF26DB3327004A0514 /* Debug */,
+				6FA93DE026DB3327004A0514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FA93D9F26DB3325004A0514 /* Project object */;
+}
