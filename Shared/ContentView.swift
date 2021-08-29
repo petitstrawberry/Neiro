@@ -9,8 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            NavigationView {
+                NavigationMenuView()
+                BrowserView()
+            }
+            Spacer()
+            NowPlayingBarView()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigation) {
+                #if os(macOS)
+                Button(action: toggleSidebar, label: {
+                    Image(systemName: "sidebar.left")
+                })
+                #endif
+            }
+        }
+    }
+
+    func toggleSidebar() {
+        #if os(macOS)
+        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+        #endif
     }
 }
 
