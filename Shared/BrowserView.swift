@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import upnpx
 
 struct BrowserView: View {
+    var mediaServer: BasicUPnPDevice? = BasicUPnPDevice.init()
+    @EnvironmentObject var discoverUPnP: DiscoverUPnP
+    
     var body: some View {
-
+        
         List {
             NavigationLink(destination: self) {
                 Text("Albums")
@@ -21,7 +25,7 @@ struct BrowserView: View {
                 Text("Genre")
             }
         }
-        .navigationTitle("Music Server")
+        .navigationTitle(mediaServer?.friendlyName ?? "Not Selected")
     }
 }
 

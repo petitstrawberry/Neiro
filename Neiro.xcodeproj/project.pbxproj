@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166BC4AD46E83E110998602E /* Pods_Neiro__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD775273847773EC21F1C2B /* Pods_Neiro__iOS_.framework */; };
+		6F31292F26DB5C5A00B6F034 /* DiscoverUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */; };
+		6F31293026DB5C6900B6F034 /* DiscoverUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */; };
+		6F31293326DB60A800B6F034 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F31293226DB60A800B6F034 /* ExternalAccessory.framework */; };
 		6FA93DC026DB3327004A0514 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DBF26DB3327004A0514 /* Tests_iOS.swift */; };
 		6FA93DCB26DB3327004A0514 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DCA26DB3327004A0514 /* Tests_macOS.swift */; };
 		6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA426DB3326004A0514 /* NeiroApp.swift */; };
@@ -23,6 +27,7 @@
 		6FA93DE926DB3CF6004A0514 /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */; };
 		6FA93DEB26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */; };
 		6FA93DEC26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */; };
+		A4A5B189F90B09CCB35FF3BA /* Pods_Neiro__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12ED0BFEE7D05B435EDBA8FB /* Pods_Neiro__macOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12ED0BFEE7D05B435EDBA8FB /* Pods_Neiro__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neiro__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E518FC3DB0F3166428C7F74 /* Pods-Neiro (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (macOS).release.xcconfig"; path = "Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		608DFC08A847EAE9364AA90D /* Pods-Neiro (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		65922A35C6DF7E21EC43A423 /* Pods-Neiro (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverUPnP.swift; sourceTree = "<group>"; };
+		6F31293126DB60A800B6F034 /* Neiro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Neiro.entitlements; sourceTree = "<group>"; };
+		6F31293226DB60A800B6F034 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/ExternalAccessory.framework; sourceTree = DEVELOPER_DIR; };
 		6FA93DA426DB3326004A0514 /* NeiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeiroApp.swift; sourceTree = "<group>"; };
 		6FA93DA526DB3326004A0514 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FA93DA626DB3327004A0514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +73,8 @@
 		6FA93DE426DB3C62004A0514 /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuView.swift; sourceTree = "<group>"; };
 		6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBarView.swift; sourceTree = "<group>"; };
+		89D1EF6B73A4FDE9AF73840C /* Pods-Neiro (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (iOS).release.xcconfig"; path = "Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		BCD775273847773EC21F1C2B /* Pods_Neiro__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neiro__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F31293326DB60A800B6F034 /* ExternalAccessory.framework in Frameworks */,
+				166BC4AD46E83E110998602E /* Pods_Neiro__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A5B189F90B09CCB35FF3BA /* Pods_Neiro__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,21 +112,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291DCB6C3E46929B76A70BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F31293226DB60A800B6F034 /* ExternalAccessory.framework */,
+				BCD775273847773EC21F1C2B /* Pods_Neiro__iOS_.framework */,
+				12ED0BFEE7D05B435EDBA8FB /* Pods_Neiro__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F31292D26DB5C4100B6F034 /* UPnP */ = {
+			isa = PBXGroup;
+			children = (
+				6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */,
+			);
+			path = UPnP;
+			sourceTree = "<group>";
+		};
 		6FA93D9E26DB3325004A0514 = {
 			isa = PBXGroup;
 			children = (
+				6F31293126DB60A800B6F034 /* Neiro.entitlements */,
 				6FA93DA326DB3326004A0514 /* Shared */,
 				6FA93DAD26DB3327004A0514 /* iOS */,
 				6FA93DB426DB3327004A0514 /* macOS */,
 				6FA93DBE26DB3327004A0514 /* Tests iOS */,
 				6FA93DC926DB3327004A0514 /* Tests macOS */,
 				6FA93DAC26DB3327004A0514 /* Products */,
+				88FA485111DD6AB328FDAEA8 /* Pods */,
+				291DCB6C3E46929B76A70BFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		6FA93DA326DB3326004A0514 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6F31292D26DB5C4100B6F034 /* UPnP */,
 				6FA93DA426DB3326004A0514 /* NeiroApp.swift */,
 				6FA93DA526DB3326004A0514 /* ContentView.swift */,
 				6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */,
@@ -167,6 +206,17 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		88FA485111DD6AB328FDAEA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				608DFC08A847EAE9364AA90D /* Pods-Neiro (iOS).debug.xcconfig */,
+				89D1EF6B73A4FDE9AF73840C /* Pods-Neiro (iOS).release.xcconfig */,
+				65922A35C6DF7E21EC43A423 /* Pods-Neiro (macOS).debug.xcconfig */,
+				2E518FC3DB0F3166428C7F74 /* Pods-Neiro (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FA93DD526DB3327004A0514 /* Build configuration list for PBXNativeTarget "Neiro (iOS)" */;
 			buildPhases = (
+				F394DF9FD7F76AE533DAD4C4 /* [CP] Check Pods Manifest.lock */,
 				6FA93DA726DB3327004A0514 /* Sources */,
 				6FA93DA826DB3327004A0514 /* Frameworks */,
 				6FA93DA926DB3327004A0514 /* Resources */,
@@ -191,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FA93DD826DB3327004A0514 /* Build configuration list for PBXNativeTarget "Neiro (macOS)" */;
 			buildPhases = (
+				58F112F143722F9026168603 /* [CP] Check Pods Manifest.lock */,
 				6FA93DAF26DB3327004A0514 /* Sources */,
 				6FA93DB026DB3327004A0514 /* Frameworks */,
 				6FA93DB126DB3327004A0514 /* Resources */,
@@ -319,6 +371,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58F112F143722F9026168603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neiro (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F394DF9FD7F76AE533DAD4C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neiro (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6FA93DA726DB3327004A0514 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -329,6 +428,7 @@
 				6FA93DCF26DB3327004A0514 /* ContentView.swift in Sources */,
 				6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */,
 				6FA93DE526DB3C62004A0514 /* BrowserView.swift in Sources */,
+				6F31292F26DB5C5A00B6F034 /* DiscoverUPnP.swift in Sources */,
 				6FA93DEB26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +442,7 @@
 				6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */,
 				6FA93DCE26DB3327004A0514 /* NeiroApp.swift in Sources */,
 				6FA93DE626DB3C62004A0514 /* BrowserView.swift in Sources */,
+				6F31293026DB5C6900B6F034 /* DiscoverUPnP.swift in Sources */,
 				6FA93DEC26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,9 +592,11 @@
 		};
 		6FA93DD626DB3327004A0514 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 608DFC08A847EAE9364AA90D /* Pods-Neiro (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Neiro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4349453P3R;
 				ENABLE_PREVIEWS = YES;
@@ -513,9 +616,11 @@
 		};
 		6FA93DD726DB3327004A0514 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D1EF6B73A4FDE9AF73840C /* Pods-Neiro (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Neiro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4349453P3R;
 				ENABLE_PREVIEWS = YES;
@@ -536,6 +641,7 @@
 		};
 		6FA93DD926DB3327004A0514 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65922A35C6DF7E21EC43A423 /* Pods-Neiro (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -560,6 +666,7 @@
 		};
 		6FA93DDA26DB3327004A0514 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E518FC3DB0F3166428C7F74 /* Pods-Neiro (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

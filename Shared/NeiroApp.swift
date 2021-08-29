@@ -12,6 +12,7 @@ struct NeiroApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(DiscoverUPnP())
         }
     }
 }
