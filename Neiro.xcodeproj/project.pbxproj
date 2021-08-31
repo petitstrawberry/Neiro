@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,18 @@
 		6F31292F26DB5C5A00B6F034 /* DiscoverUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */; };
 		6F31293026DB5C6900B6F034 /* DiscoverUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */; };
 		6F31293326DB60A800B6F034 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F31293226DB60A800B6F034 /* ExternalAccessory.framework */; };
+		6F31293526DB714000B6F034 /* MediaServersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31293426DB714000B6F034 /* MediaServersListView.swift */; };
+		6F31293626DB714000B6F034 /* MediaServersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31293426DB714000B6F034 /* MediaServersListView.swift */; };
+		6F58E24226DCA6F500E99B98 /* MediaItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */; };
+		6F58E24326DCA88800E99B98 /* MediaItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */; };
+		6F58E24526DCABBC00E99B98 /* BrowserListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */; };
+		6F58E24626DCABBC00E99B98 /* BrowserListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */; };
+		6F58E24926DCAD0400E99B98 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 6F58E24826DCAD0400E99B98 /* URLImageStore */; };
+		6F58E24B26DCAD0400E99B98 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6F58E24A26DCAD0400E99B98 /* URLImage */; };
+		6F58E24D26DCAD0D00E99B98 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6F58E24C26DCAD0D00E99B98 /* URLImage */; };
+		6F58E24F26DCAD1000E99B98 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 6F58E24E26DCAD1000E99B98 /* URLImageStore */; };
+		6F5E6EAA26DBBB0E0093CDE1 /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E6EA626DBB9B30093CDE1 /* BrowserView.swift */; };
+		6F5E6EAD26DBBCA70093CDE1 /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E6EAB26DBBCA30093CDE1 /* BrowserView.swift */; };
 		6FA93DC026DB3327004A0514 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DBF26DB3327004A0514 /* Tests_iOS.swift */; };
 		6FA93DCB26DB3327004A0514 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DCA26DB3327004A0514 /* Tests_macOS.swift */; };
 		6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA426DB3326004A0514 /* NeiroApp.swift */; };
@@ -21,8 +33,6 @@
 		6FA93DD226DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
 		6FA93DE226DB3B75004A0514 /* NowPlayingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */; };
 		6FA93DE326DB3B75004A0514 /* NowPlayingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */; };
-		6FA93DE526DB3C62004A0514 /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE426DB3C62004A0514 /* BrowserView.swift */; };
-		6FA93DE626DB3C62004A0514 /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE426DB3C62004A0514 /* BrowserView.swift */; };
 		6FA93DE826DB3CF6004A0514 /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */; };
 		6FA93DE926DB3CF6004A0514 /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */; };
 		6FA93DEB26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */; };
@@ -55,6 +65,11 @@
 		6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverUPnP.swift; sourceTree = "<group>"; };
 		6F31293126DB60A800B6F034 /* Neiro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Neiro.entitlements; sourceTree = "<group>"; };
 		6F31293226DB60A800B6F034 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/ExternalAccessory.framework; sourceTree = DEVELOPER_DIR; };
+		6F31293426DB714000B6F034 /* MediaServersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaServersListView.swift; sourceTree = "<group>"; };
+		6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemListCellView.swift; sourceTree = "<group>"; };
+		6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserListCellView.swift; sourceTree = "<group>"; };
+		6F5E6EA626DBB9B30093CDE1 /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
+		6F5E6EAB26DBBCA30093CDE1 /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		6FA93DA426DB3326004A0514 /* NeiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeiroApp.swift; sourceTree = "<group>"; };
 		6FA93DA526DB3326004A0514 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FA93DA626DB3327004A0514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,7 +85,6 @@
 		6FA93DCA26DB3327004A0514 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		6FA93DCC26DB3327004A0514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMainView.swift; sourceTree = "<group>"; };
-		6FA93DE426DB3C62004A0514 /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuView.swift; sourceTree = "<group>"; };
 		6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBarView.swift; sourceTree = "<group>"; };
 		89D1EF6B73A4FDE9AF73840C /* Pods-Neiro (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (iOS).release.xcconfig"; path = "Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +97,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F31293326DB60A800B6F034 /* ExternalAccessory.framework in Frameworks */,
+				6F58E24926DCAD0400E99B98 /* URLImageStore in Frameworks */,
+				6F58E24B26DCAD0400E99B98 /* URLImage in Frameworks */,
 				166BC4AD46E83E110998602E /* Pods_Neiro__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F58E24D26DCAD0D00E99B98 /* URLImage in Frameworks */,
+				6F58E24F26DCAD1000E99B98 /* URLImageStore in Frameworks */,
 				A4A5B189F90B09CCB35FF3BA /* Pods_Neiro__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,8 +171,10 @@
 				6FA93DA526DB3326004A0514 /* ContentView.swift */,
 				6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */,
 				6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */,
-				6FA93DE426DB3C62004A0514 /* BrowserView.swift */,
+				6F31293426DB714000B6F034 /* MediaServersListView.swift */,
 				6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */,
+				6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */,
+				6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */,
 				6FA93DA626DB3327004A0514 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -175,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				6FA93DAE26DB3327004A0514 /* Info.plist */,
+				6F5E6EAB26DBBCA30093CDE1 /* BrowserView.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -182,6 +203,7 @@
 		6FA93DB426DB3327004A0514 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				6F5E6EA626DBB9B30093CDE1 /* BrowserView.swift */,
 				6FA93DB526DB3327004A0514 /* Info.plist */,
 				6FA93DB626DB3327004A0514 /* macOS.entitlements */,
 			);
@@ -234,6 +256,10 @@
 			dependencies = (
 			);
 			name = "Neiro (iOS)";
+			packageProductDependencies = (
+				6F58E24826DCAD0400E99B98 /* URLImageStore */,
+				6F58E24A26DCAD0400E99B98 /* URLImage */,
+			);
 			productName = "Neiro (iOS)";
 			productReference = 6FA93DAB26DB3327004A0514 /* Neiro.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +278,10 @@
 			dependencies = (
 			);
 			name = "Neiro (macOS)";
+			packageProductDependencies = (
+				6F58E24C26DCAD0D00E99B98 /* URLImage */,
+				6F58E24E26DCAD1000E99B98 /* URLImageStore */,
+			);
 			productName = "Neiro (macOS)";
 			productReference = 6FA93DB326DB3327004A0514 /* Neiro.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +356,9 @@
 				Base,
 			);
 			mainGroup = 6FA93D9E26DB3325004A0514;
+			packageReferences = (
+				6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 6FA93DAC26DB3327004A0514 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -426,9 +459,12 @@
 				6FA93DE826DB3CF6004A0514 /* NavigationMenuView.swift in Sources */,
 				6FA93DE226DB3B75004A0514 /* NowPlayingMainView.swift in Sources */,
 				6FA93DCF26DB3327004A0514 /* ContentView.swift in Sources */,
+				6F58E24526DCABBC00E99B98 /* BrowserListCellView.swift in Sources */,
+				6F58E24226DCA6F500E99B98 /* MediaItemListCellView.swift in Sources */,
+				6F5E6EAD26DBBCA70093CDE1 /* BrowserView.swift in Sources */,
 				6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */,
-				6FA93DE526DB3C62004A0514 /* BrowserView.swift in Sources */,
 				6F31292F26DB5C5A00B6F034 /* DiscoverUPnP.swift in Sources */,
+				6F31293526DB714000B6F034 /* MediaServersListView.swift in Sources */,
 				6FA93DEB26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,9 +476,12 @@
 				6FA93DE926DB3CF6004A0514 /* NavigationMenuView.swift in Sources */,
 				6FA93DE326DB3B75004A0514 /* NowPlayingMainView.swift in Sources */,
 				6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */,
+				6F58E24626DCABBC00E99B98 /* BrowserListCellView.swift in Sources */,
+				6F5E6EAA26DBBB0E0093CDE1 /* BrowserView.swift in Sources */,
 				6FA93DCE26DB3327004A0514 /* NeiroApp.swift in Sources */,
-				6FA93DE626DB3C62004A0514 /* BrowserView.swift in Sources */,
 				6F31293026DB5C6900B6F034 /* DiscoverUPnP.swift in Sources */,
+				6F58E24326DCA88800E99B98 /* MediaItemListCellView.swift in Sources */,
+				6F31293626DB714000B6F034 /* MediaServersListView.swift in Sources */,
 				6FA93DEC26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,6 +866,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6F58E24826DCAD0400E99B98 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		6F58E24A26DCAD0400E99B98 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		6F58E24C26DCAD0D00E99B98 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		6F58E24E26DCAD1000E99B98 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FA93D9F26DB3325004A0514 /* Project object */;
 }
