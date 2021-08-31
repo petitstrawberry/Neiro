@@ -8,19 +8,11 @@
 import SwiftUI
 
 struct NavigationMenuView: View {
-    @EnvironmentObject var discoverUPnP: DiscoverUPnP
     var body: some View {
         VStack {
-            List {
-                ForEach(0..<discoverUPnP.mediaServers.count, id: \.self) { index in
-                    NavigationLink(
-                        destination: BrowserView(mediaServer: discoverUPnP.mediaServers[index]),
-                        label: {
-                            Text(discoverUPnP.mediaServers[index].friendlyName)
-                    })
-                }
-            }
-            .listStyle(SidebarListStyle())
+            MediaServersListView()
+                .navigationTitle("Media Servers")
+                .listStyle(SidebarListStyle())
         }
     }
 }

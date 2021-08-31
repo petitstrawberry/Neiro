@@ -10,7 +10,7 @@ import upnpx
 
 class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
     @Published var upnpDevices : [BasicUPnPDevice] = []
-    @Published var mediaServers: [BasicUPnPDevice] = []
+    @Published var mediaServers: [MediaServer1Device] = []
     var upnpdb: UPnPDB?
     
     override init() {
@@ -20,6 +20,7 @@ class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
     
     
     func searchDevices() {
+        print(#function)
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
         
         upnpDevices.removeAll()
@@ -27,7 +28,6 @@ class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
         upnpdb?.add(self)
         UPnPManager.getInstance()?.ssdp.setUserAgentProduct("Neiro 1.0", andOS: version as? String)
         _ = UPnPManager.getInstance()?.ssdp.searchSSDP
-                    
         upnpDevices = upnpdb?.rootDevices as! [BasicUPnPDevice]
     }
     
@@ -45,11 +45,11 @@ class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
     }
     
     // MediaServerだけ返す
-    func getMediaServers(devices: [BasicUPnPDevice]) -> [BasicUPnPDevice] {
-        var servers: [BasicUPnPDevice] = []
+    func getMediaServers(devices: [BasicUPnPDevice]) -> [MediaServer1Device] {
+        var servers: [MediaServer1Device] = []
         for device in devices {
             if device.urn == "urn:schemas-upnp-org:device:MediaServer:1" {
-                servers.append(device)
+                servers.append(device as! MediaServer1Device)
             }
         }
         return servers

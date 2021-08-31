@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var discoverUPnP: DiscoverUPnP
+    @State var selection: Int? = 0
     
     var body: some View {
         VStack {
             NavigationView {
                 NavigationMenuView()
-                BrowserView()
+                // BrowserView()
             }
             Spacer()
             NowPlayingBarView()
