@@ -23,7 +23,7 @@ struct BrowserView: View {
                 // mediabjectの種類によって動作を変える
                     if mediaObjects[index].isContainer {
                         let browserView = BrowserView(mediaServer: mediaServer, containerObject: (mediaObjects[index] as! MediaServer1ContainerObject))
-                        
+
                         NavigationLink(
                             destination: browserView,
                             label: {
@@ -34,7 +34,6 @@ struct BrowserView: View {
                     }else {
                         MediaItemListCellView(mediaItem: (mediaObjects[index] as! MediaServer1ItemObject))
                             .padding(.horizontal)
-                            
                     }
                     Divider()
                 }
@@ -50,9 +49,9 @@ struct BrowserView: View {
                 print("onDisappear")
             }
         }
-        
+
     }
-    
+
     func refreshMediaObjects() {
         print(#function)
         let objectID = containerObject?.objectID ?? "0"
@@ -60,7 +59,7 @@ struct BrowserView: View {
         let numberReturned = NSMutableString()
         let totalMatches = NSMutableString()
         let updateID = NSMutableString()
-        
+
         if let contentDirectory = mediaServer?.contentDirectory {
             contentDirectory.browse(
                 withObjectID: objectID,
@@ -74,17 +73,17 @@ struct BrowserView: View {
                 outTotalMatches: totalMatches,
                 outUpdateID: updateID
             )
-            
+
             let mediaObjects = NSMutableArray()
             let parser = MediaServerBasicObjectParser(mediaObjectArray: mediaObjects, itemsOnly: false)
             parser?.parse(from: (result as String).data(using: .utf8))
-            
+
             if let mediaObjects1 = mediaObjects as? [MediaServer1BasicObject] {
                 self.mediaObjects = mediaObjects1
 //                DispatchQueue.main.async() {
 //                    self.mediaObjects = mediaObjects1
 //                }
-                
+
             }
         }
     }

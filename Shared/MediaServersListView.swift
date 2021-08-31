@@ -14,7 +14,7 @@ struct MediaServersListView: View {
     
     var body: some View {
         VStack {
-            Button (action: discoverUPnP.searchDevices, label: {
+            Button (action: discoverUPnP.scanUPnPDevices, label: {
                 Text("Refresh")
             })
             List(discoverUPnP.mediaServers, id: \.self) { mediaServer in

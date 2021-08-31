@@ -15,20 +15,7 @@ class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
     
     override init() {
         super.init()
-        self.searchDevices()
-    }
-    
-    
-    func searchDevices() {
-        print(#function)
-        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
-        
-        upnpDevices.removeAll()
-        upnpdb = UPnPManager.getInstance()?.db
-        upnpdb?.add(self)
-        UPnPManager.getInstance()?.ssdp.setUserAgentProduct("Neiro 1.0", andOS: version as? String)
-        _ = UPnPManager.getInstance()?.ssdp.searchSSDP
-        upnpDevices = upnpdb?.rootDevices as! [BasicUPnPDevice]
+        self.scanUPnPDevices()
     }
     
     func uPnPDBWillUpdate(_ db: UPnPDB!) {
@@ -42,6 +29,18 @@ class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
                 mediaServers = getMediaServers(devices: upnpDevices)
             }
         }
+    }
+    
+    func scanUPnPDevices() {
+        print(#function)
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
+        
+        upnpDevices.removeAll()
+        upnpdb = UPnPManager.getInstance()?.db
+        upnpdb?.add(self)
+        UPnPManager.getInstance()?.ssdp.setUserAgentProduct("Neiro 1.0", andOS: version as? String)
+        _ = UPnPManager.getInstance()?.ssdp.searchSSDP
+        upnpDevices = upnpdb?.rootDevices as! [BasicUPnPDevice]
     }
     
     // MediaServerだけ返す
