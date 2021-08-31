@@ -28,18 +28,18 @@ struct BrowserView: View {
                             destination: browserView,
                             label: {
                                 BrowserListCellView(mediaContainer: (mediaObjects[index] as! MediaServer1ContainerObject))
-                                    .padding(.horizontal, 8)
+                                    .padding(.horizontal)
                             }
                         )
                     }else {
                         MediaItemListCellView(mediaItem: (mediaObjects[index] as! MediaServer1ItemObject))
-                            .padding(.horizontal, 8)
+                            .padding(.horizontal)
                             
                     }
                     Divider()
                 }
             }
-            .navigationTitle(containerObject?.title ?? "")
+            .navigationTitle(containerObject?.title ?? ( mediaServer?.friendlyName ?? ""))
             .onAppear() {
                 print("onAppear")
                 DispatchQueue.global().async() {
