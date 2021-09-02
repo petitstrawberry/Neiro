@@ -13,6 +13,7 @@ struct NeiroApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(DiscoverUPnP())
+                .environmentObject(UserDataObject())
         }
     }
 }
