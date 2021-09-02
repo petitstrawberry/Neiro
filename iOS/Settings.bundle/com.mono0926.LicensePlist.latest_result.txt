@@ -1,0 +1,19 @@
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 3.13.0
+
+name: upnpx, nameSpecified: 
+body: Copyright (c) 2011-2…
+version: 1.4.3
+
+name: upnpx, nameSpecified: 
+body: Copyright (c) 2011-2…
+version: 1.4.3
+
+name: url-image, nameSpecified: URLImage, owner: dmytro-anokhin, version: 3.1.0
+
+add-version-numbers: false
+
+LicensePlist Version: 3.13.0

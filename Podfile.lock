@@ -1,16 +1,20 @@
 PODS:
+  - LicensePlist (3.13.0)
   - upnpx (1.4.3)
 
 DEPENDENCIES:
+  - LicensePlist
   - upnpx
 
 SPEC REPOS:
   trunk:
+    - LicensePlist
     - upnpx
 
 SPEC CHECKSUMS:
+  LicensePlist: 4e87d3438e03ae2d368ff5bd85344aa03ca722eb
   upnpx: ad8791295befdc0a0702089daf067d21c76194fc
 
-PODFILE CHECKSUM: 5d075e685a2378030fcc875941ad11ec083523df
+PODFILE CHECKSUM: 49c7d32828b22e2cfcf847b2f671a19c76052f22
 
 COCOAPODS: 1.10.2
