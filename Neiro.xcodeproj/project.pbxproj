@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		166BC4AD46E83E110998602E /* Pods_Neiro__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD775273847773EC21F1C2B /* Pods_Neiro__iOS_.framework */; };
+		6F1C0F8F26E071F2008E10A3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F1C0F8E26E071F2008E10A3 /* Settings.bundle */; };
 		6F31292F26DB5C5A00B6F034 /* DiscoverUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */; };
 		6F31293026DB5C6900B6F034 /* DiscoverUPnP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */; };
 		6F31293326DB60A800B6F034 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F31293226DB60A800B6F034 /* ExternalAccessory.framework */; };
@@ -62,6 +63,7 @@
 		2E518FC3DB0F3166428C7F74 /* Pods-Neiro (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (macOS).release.xcconfig"; path = "Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		608DFC08A847EAE9364AA90D /* Pods-Neiro (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		65922A35C6DF7E21EC43A423 /* Pods-Neiro (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neiro (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		6F1C0F8E26E071F2008E10A3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6F31292E26DB5C5A00B6F034 /* DiscoverUPnP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverUPnP.swift; sourceTree = "<group>"; };
 		6F31293126DB60A800B6F034 /* Neiro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Neiro.entitlements; sourceTree = "<group>"; };
 		6F31293226DB60A800B6F034 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/ExternalAccessory.framework; sourceTree = DEVELOPER_DIR; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				6FA93DAE26DB3327004A0514 /* Info.plist */,
+				6F1C0F8E26E071F2008E10A3 /* Settings.bundle */,
 				6F5E6EAB26DBBCA30093CDE1 /* BrowserView.swift */,
 			);
 			path = iOS;
@@ -250,6 +253,7 @@
 				6FA93DA726DB3327004A0514 /* Sources */,
 				6FA93DA826DB3327004A0514 /* Frameworks */,
 				6FA93DA926DB3327004A0514 /* Resources */,
+				6F1723AF26E069F600CD767C /* LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -376,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F1C0F8F26E071F2008E10A3 /* Settings.bundle in Resources */,
 				6FA93DD126DB3327004A0514 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +431,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6F1723AF26E069F600CD767C /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path iOS/Settings.bundle\nfi\n";
 		};
 		F394DF9FD7F76AE533DAD4C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

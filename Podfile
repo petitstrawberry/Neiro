@@ -7,6 +7,7 @@ target 'Neiro (iOS)' do
 
   # Pods for Neiro (iOS)
   pod 'upnpx'
+  pod 'LicensePlist'
 
 end
 
