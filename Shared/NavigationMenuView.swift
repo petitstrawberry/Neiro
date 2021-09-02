@@ -12,7 +12,6 @@ struct NavigationMenuView: View {
         VStack {
             MediaServersListView()
                 .navigationTitle("Media Servers")
-                .listStyle(SidebarListStyle())
         }
     }
 }
@@ -20,5 +19,6 @@ struct NavigationMenuView: View {
 struct NavigationMenuView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationMenuView()
+            .environmentObject(DiscoverUPnP())
     }
 }

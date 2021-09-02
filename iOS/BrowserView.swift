@@ -10,6 +10,7 @@ import upnpx
 
 struct BrowserView: View {
     @EnvironmentObject var discoverUPnP: DiscoverUPnP
+    @EnvironmentObject var userData: UserDataObject
     var mediaServer: MediaServer1Device?
     var containerObject: MediaServer1ContainerObject?
     @State var isAppeared = false
@@ -38,18 +39,20 @@ struct BrowserView: View {
                     Divider()
                 }
             }
-            .navigationTitle(containerObject?.title ?? ( mediaServer?.friendlyName ?? ""))
-            .onAppear() {
-                print("onAppear")
-                DispatchQueue.global().async() {
-                    refreshMediaObjects()
-                }
-            }
-            .onDisappear() {
-                print("onDisappear")
+        }
+        .navigationTitle(containerObject?.title ?? ( mediaServer?.friendlyName ?? ""))
+        .navigationBarItems(trailing: Button(action: addSavedServer, label: {
+            Image(systemName: "plus")
+        }))
+        .onAppear() {
+            print("onAppear")
+            DispatchQueue.global().async() {
+                refreshMediaObjects()
             }
         }
-
+        .onDisappear() {
+            print("onDisappear")
+        }
     }
 
     func refreshMediaObjects() {
@@ -85,6 +88,16 @@ struct BrowserView: View {
 //                }
 
             }
+        }
+    }
+    
+    func addSavedServer() {
+        dump(mediaServer?.baseURL)
+        if let url = mediaServer?.baseURL {
+            let server = SavedServer()
+            server.url = url
+            userData.savedServers.append(server)
+            userData.storeSavedServers()
         }
     }
 }
