@@ -6,7 +6,7 @@ target 'Neiro (iOS)' do
   use_frameworks!
 
   # Pods for Neiro (iOS)
-  pod 'upnpx'
+  pod 'CocoaUPnP', :git => 'https://github.com/PetitStrawberry/CocoaUPnP', :branch => 'develop'
   pod 'LicensePlist'
 
 end
@@ -16,6 +16,6 @@ target 'Neiro (macOS)' do
   use_frameworks!
 
   # Pods for Neiro (macOS)
-  pod 'upnpx'
+  pod 'CocoaUPnP', :git => 'https://github.com/PetitStrawberry/CocoaUPnP', :branch => 'develop'
 
 end

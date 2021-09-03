@@ -6,51 +6,37 @@
 //
 
 import Foundation
-import upnpx
+import CocoaUPnP
 
-class DiscoverUPnP: NSObject, ObservableObject, UPnPDBObserver {
-    @Published var upnpDevices : [BasicUPnPDevice] = []
-    @Published var mediaServers: [MediaServer1Device] = []
-    var upnpdb: UPnPDB?
+class DiscoverUPnP: NSObject, ObservableObject, UPPDiscoveryDelegate {
+    @Published var upnpDevices : [UPPBasicDevice] = []
+    @Published var mediaServers: [UPPMediaServerDevice] = []
     
     override init() {
         super.init()
         self.scanUPnPDevices()
     }
     
-    func uPnPDBWillUpdate(_ db: UPnPDB!) {
-        print(#function)
-    }
-    func uPnPDBUpdated(_ db: UPnPDB!) {
-        print(#function)
-        if let devices = db.rootDevices as? [BasicUPnPDevice] {
-            DispatchQueue.main.sync {
-                upnpDevices = devices
-                mediaServers = getMediaServers(devices: upnpDevices)
-            }
-        }
-    }
+    
     
     func scanUPnPDevices() {
         print(#function)
-        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
+//        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
         
         upnpDevices.removeAll()
-        upnpdb = UPnPManager.getInstance()?.db
-        upnpdb?.add(self)
-        UPnPManager.getInstance()?.ssdp.setUserAgentProduct("Neiro 1.0", andOS: version as? String)
-        _ = UPnPManager.getInstance()?.ssdp.searchSSDP
-        upnpDevices = upnpdb?.rootDevices as! [BasicUPnPDevice]
+        mediaServers.removeAll()
+        UPPDiscovery.sharedInstance().addBrowserObserver(self)
+        UPPDiscovery.sharedInstance().startBrowsing(forServices: "ssdp:all")
     }
     
-    // MediaServerだけ返す
-    func getMediaServers(devices: [BasicUPnPDevice]) -> [MediaServer1Device] {
-        var servers: [MediaServer1Device] = []
-        for device in devices {
-            if device.urn == "urn:schemas-upnp-org:device:MediaServer:1" {
-                servers.append(device as! MediaServer1Device)
-            }
+    func discovery(_ discovery: UPPDiscovery, didFind device: UPPBasicDevice) {
+        print(#function)
+        if upnpDevices.contains(device) {
+            return
         }
-        return servers
+        upnpDevices.append(device)
+        if device.deviceType == "urn:schemas-upnp-org:device:MediaServer:1" {
+            mediaServers.append(device as! UPPMediaServerDevice)
+        }
     }
 }

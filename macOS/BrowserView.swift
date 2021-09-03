@@ -6,68 +6,81 @@
 //
 
 import SwiftUI
-import upnpx
+import CocoaUPnP
 
 struct BrowserView: View {
     @EnvironmentObject var discoverUPnP: DiscoverUPnP
-    var mediaServer: MediaServer1Device?
-    var containerObject: MediaServer1ContainerObject?
-    @State var mediaObjects: [MediaServer1BasicObject] = []
+    @EnvironmentObject var userData: UserDataObject
+    var mediaServer: UPPMediaServerDevice?
+    var containerObject: UPPMediaItem?
+    @State var isAppeared = false
+    @State var mediaObjects: [UPPMediaItem] = []
     
     var body: some View {
         NavigationView {
             
             List(mediaObjects.indices, id: \.self) { index in
                 // mediabjectの種類によって動作を変える
-                if mediaObjects[index] is MediaServer1ContainerObject {
+                if mediaObjects[index].isContainer {
+                    let browserView = BrowserView(mediaServer: mediaServer, containerObject: mediaObjects[index])
+
                     NavigationLink(
-                        destination: BrowserView(mediaServer: mediaServer, containerObject: (mediaObjects[index] as! MediaServer1ContainerObject)).navigationTitle(mediaObjects[index].title ?? ""),
+                        destination: browserView,
                         label: {
-                            BrowserListCellView(mediaContainer: (mediaObjects[index] as! MediaServer1ContainerObject))
+                            BrowserListCellView(mediaContainer: mediaObjects[index])
+                                
                         }
                     )
-                }else if mediaObjects[index] is MediaServer1ItemObject {
-                    MediaItemListCellView(mediaItem: (mediaObjects[index] as! MediaServer1ItemObject))
+                }else {
+                    MediaItemListCellView(mediaItem: mediaObjects[index])
+                        
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationTitle(mediaServer?.friendlyName ?? "")
+            .onAppear() {
+                DispatchQueue.global().async {
+                    refreshMediaObjects()
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationTitle(mediaServer?.friendlyName ?? "")
-        .onAppear() {
-            DispatchQueue.global().async {
-                refreshMediaObjects()
+    }
+        
+    
+    func refreshMediaObjects() {
+        print(#function)
+            
+        if let contentDirectory = mediaServer?.contentDirectoryService() {
+            contentDirectory.browse(
+                withObjectID: containerObject?.objectID ?? "0",
+                browseFlag: "BrowseDirectChildren",
+                filter: "*",
+                startingIndex: 0,
+                requestedCount: 0,
+                sortCritera: ""
+            ) { response, error in
+                if (response != nil) {
+                    dump(response)
+                    loadResults(results: response!["Result"] as! [AnyHashable?])
+                }
             }
         }
     }
-    
-    func refreshMediaObjects() {
-        let objectID = containerObject?.objectID ?? "0"
-        let result = NSMutableString()
-        let numberReturned = NSMutableString()
-        let totalMatches = NSMutableString()
-        let updateID = NSMutableString()
         
-        if let contentDirectory = mediaServer?.contentDirectory {
-            contentDirectory.browse(
-                withObjectID: objectID,
-                browseFlag: "BrowseDirectChildren",
-                filter: "*",
-                startingIndex: "0",
-                requestedCount: "0",
-                sortCriteria: "",
-                outResult: result,
-                outNumberReturned: numberReturned,
-                outTotalMatches: totalMatches,
-                outUpdateID: updateID
-            )
-            
-            let mediaObjects = NSMutableArray()
-            let parser = MediaServerBasicObjectParser(mediaObjectArray: mediaObjects, itemsOnly: false)
-            parser?.parse(from: (result as String).data(using: .utf8))
-            
-            if let mediaObjects1 = mediaObjects as? [MediaServer1BasicObject] {
-                self.mediaObjects = mediaObjects1
-            }
+    func loadResults(results: [AnyHashable?]) {
+        mediaObjects.removeAll()
+        for result in results {
+            mediaObjects.append(result as! UPPMediaItem)
+        }
+    }
+        
+    func addSavedServer() {
+        dump(mediaServer?.baseURL)
+        if let url = mediaServer?.baseURL {
+            let server = SavedServer()
+            server.url = url
+            userData.savedServers.append(server)
+            userData.storeSavedServers()
         }
     }
 }

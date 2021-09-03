@@ -270,6 +270,7 @@
 				6FA93DA826DB3327004A0514 /* Frameworks */,
 				6FA93DA926DB3327004A0514 /* Resources */,
 				6F1723AF26E069F600CD767C /* LicensePlist */,
+				EAA59B6AA9D21ACD2029B39E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +293,7 @@
 				6FA93DAF26DB3327004A0514 /* Sources */,
 				6FA93DB026DB3327004A0514 /* Frameworks */,
 				6FA93DB126DB3327004A0514 /* Resources */,
+				C709B63B1DF8C14F9D1F0B3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -465,6 +467,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path iOS/Settings.bundle\nfi\n";
+		};
+		C709B63B1DF8C14F9D1F0B3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neiro (macOS)/Pods-Neiro (macOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAA59B6AA9D21ACD2029B39E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neiro (iOS)/Pods-Neiro (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		F394DF9FD7F76AE533DAD4C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -12,6 +12,38 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/AFNetworking</string>
+			<key>Title</key>
+			<string>AFNetworking</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/CocoaAsyncSocket</string>
+			<key>Title</key>
+			<string>CocoaAsyncSocket</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/CocoaUPnP</string>
+			<key>Title</key>
+			<string>CocoaUPnP</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/GCDWebServer</string>
+			<key>Title</key>
+			<string>GCDWebServer</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/LicensePlist</string>
 			<key>Title</key>
 			<string>LicensePlist</string>
@@ -20,9 +52,9 @@
 		</dict>
 		<dict>
 			<key>File</key>
-			<string>com.mono0926.LicensePlist/upnpx</string>
+			<string>com.mono0926.LicensePlist/Ono</string>
 			<key>Title</key>
-			<string>upnpx</string>
+			<string>Ono</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
