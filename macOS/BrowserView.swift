@@ -76,12 +76,8 @@ struct BrowserView: View {
         
     func addSavedServer() {
         dump(mediaServer?.baseURL)
-        if let url = mediaServer?.baseURL {
-            let server = SavedServer()
-            server.url = url
-            userData.savedServers.append(server)
-            userData.storeSavedServers()
-        }
+        userData.savedServers.append(mediaServer!)
+        userData.storeSavedServers()
     }
 }
 
