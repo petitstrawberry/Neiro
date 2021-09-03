@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import upnpx
+import CocoaUPnP
 
 struct MediaServersListView: View {
-    var mediaServer: MediaServer1Device? = MediaServer1Device.init()
+    var mediaServer: UPPMediaServerDevice?
     @EnvironmentObject var discoverUPnP: DiscoverUPnP
     @EnvironmentObject var userData: UserDataObject
     
@@ -52,7 +52,7 @@ struct MediaServersListView: View {
                         let browserView = BrowserView(mediaServer: mediaServer)
                         NavigationLink(
                             destination: browserView
-                                .navigationTitle(mediaServer.friendlyName ?? ""),
+                                .navigationTitle(mediaServer.friendlyName ),
                             label: {
                                 Text(mediaServer.friendlyName)
                             }

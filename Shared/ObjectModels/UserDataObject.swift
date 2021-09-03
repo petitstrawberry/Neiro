@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import upnpx
+import CocoaUPnP
 
 class UserDataObject: ObservableObject {
     @Published var savedServers:[SavedServer] = []

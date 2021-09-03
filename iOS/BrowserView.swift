@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-import upnpx
+import CocoaUPnP
 
 struct BrowserView: View {
     @EnvironmentObject var discoverUPnP: DiscoverUPnP
     @EnvironmentObject var userData: UserDataObject
-    var mediaServer: MediaServer1Device?
-    var containerObject: MediaServer1ContainerObject?
+    var mediaServer: UPPMediaServerDevice?
+    var containerObject: UPPMediaItem?
     @State var isAppeared = false
-    @State var mediaObjects: [MediaServer1BasicObject] = []
+    @State var mediaObjects: [UPPMediaItem] = []
 
     var body: some View {
         ScrollView {
@@ -23,24 +23,24 @@ struct BrowserView: View {
                 ForEach(mediaObjects.indices, id: \.self) { index in
                 // mediabjectの種類によって動作を変える
                     if mediaObjects[index].isContainer {
-                        let browserView = BrowserView(mediaServer: mediaServer, containerObject: (mediaObjects[index] as! MediaServer1ContainerObject))
+                        let browserView = BrowserView(mediaServer: mediaServer, containerObject: mediaObjects[index])
 
                         NavigationLink(
                             destination: browserView,
                             label: {
-                                BrowserListCellView(mediaContainer: (mediaObjects[index] as! MediaServer1ContainerObject))
+                                BrowserListCellView(mediaContainer: mediaObjects[index])
                                     .padding(.horizontal)
                             }
                         )
                     }else {
-                        MediaItemListCellView(mediaItem: (mediaObjects[index] as! MediaServer1ItemObject))
+                        MediaItemListCellView(mediaItem: mediaObjects[index])
                             .padding(.horizontal)
                     }
                     Divider()
                 }
             }
         }
-        .navigationTitle(containerObject?.title ?? ( mediaServer?.friendlyName ?? ""))
+        .navigationTitle(containerObject?.itemTitle ?? ( mediaServer?.friendlyName ?? ""))
         .navigationBarItems(trailing: Button(action: addSavedServer, label: {
             Image(systemName: "plus")
         }))
@@ -57,37 +57,28 @@ struct BrowserView: View {
 
     func refreshMediaObjects() {
         print(#function)
-        let objectID = containerObject?.objectID ?? "0"
-        let result = NSMutableString()
-        let numberReturned = NSMutableString()
-        let totalMatches = NSMutableString()
-        let updateID = NSMutableString()
-
-        if let contentDirectory = mediaServer?.contentDirectory {
+        
+        if let contentDirectory = mediaServer?.contentDirectoryService() {
             contentDirectory.browse(
-                withObjectID: objectID,
+                withObjectID: containerObject?.objectID ?? "0",
                 browseFlag: "BrowseDirectChildren",
                 filter: "*",
-                startingIndex: "0",
-                requestedCount: "0",
-                sortCriteria: "",
-                outResult: result,
-                outNumberReturned: numberReturned,
-                outTotalMatches: totalMatches,
-                outUpdateID: updateID
-            )
-
-            let mediaObjects = NSMutableArray()
-            let parser = MediaServerBasicObjectParser(mediaObjectArray: mediaObjects, itemsOnly: false)
-            parser?.parse(from: (result as String).data(using: .utf8))
-
-            if let mediaObjects1 = mediaObjects as? [MediaServer1BasicObject] {
-                self.mediaObjects = mediaObjects1
-//                DispatchQueue.main.async() {
-//                    self.mediaObjects = mediaObjects1
-//                }
-
+                startingIndex: 0,
+                requestedCount: 0,
+                sortCritera: ""
+            ) { response, error in
+                if (response != nil) {
+                    dump(response)
+                    loadResults(results: response!["Result"] as! [AnyHashable?])
+                }
             }
+        }
+    }
+    
+    func loadResults(results: [AnyHashable?]) {
+        mediaObjects.removeAll()
+        for result in results {
+            mediaObjects.append(result as! UPPMediaItem)
         }
     }
     
@@ -100,6 +91,7 @@ struct BrowserView: View {
             userData.storeSavedServers()
         }
     }
+    
 }
 
 struct BrowserView_Previews: PreviewProvider {

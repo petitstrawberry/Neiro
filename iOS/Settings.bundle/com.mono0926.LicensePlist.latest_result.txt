@@ -1,16 +1,48 @@
+name: AFNetworking, nameSpecified: 
+body: Copyright (c) 2011-2…
+version: 4.0.1
+
+name: AFNetworking, nameSpecified: 
+body: Copyright (c) 2011-2…
+version: 4.0.1
+
+name: CocoaAsyncSocket, nameSpecified: 
+body: Public Domain Licens…
+version: 7.6.5
+
+name: CocoaAsyncSocket, nameSpecified: 
+body: Public Domain Licens…
+version: 7.6.5
+
+name: CocoaUPnP, nameSpecified: 
+body: Copyright (c) 2015 A…
+version: 3.1.0
+
+name: CocoaUPnP, nameSpecified: 
+body: Copyright (c) 2015 A…
+version: 3.1.0
+
+name: GCDWebServer, nameSpecified: 
+body: Copyright (c) 2012-2…
+version: 3.5.4
+
+name: GCDWebServer, nameSpecified: 
+body: Copyright (c) 2012-2…
+version: 3.5.4
+
 name: LicensePlist, nameSpecified: 
 body: MIT License
 
 Copyrig…
 version: 3.13.0
 
-name: upnpx, nameSpecified: 
-body: Copyright (c) 2011-2…
-version: 1.4.3
+name: Ono, nameSpecified: 
+body: Copyright (c) 2014 –…
+version: 2.1.2
 
-name: upnpx, nameSpecified: 
-body: Copyright (c) 2011-2…
-version: 1.4.3
+name: Ono, nameSpecified: 
+body: Copyright (c) 2014 –…
+version: 2.1.2
 
 name: url-image, nameSpecified: URLImage, owner: dmytro-anokhin, version: 3.1.0
 

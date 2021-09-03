@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
-import upnpx
 import URLImage
 import URLImageStore
+import CocoaUPnP
 
 struct BrowserListCellView: View {
-    var mediaContainer: MediaServer1ContainerObject?
+    var mediaContainer: UPPMediaItem?
     
     var body: some View {
         VStack (alignment: .leading) {
-            if let url = mediaContainer?.albumArt {
+            if let url = mediaContainer?.albumArtURLString {
                 HStack {
                     URLImage(URL(string: url)!) { image in
                         image
@@ -23,7 +23,7 @@ struct BrowserListCellView: View {
                             .scaledToFit()
                     }
                     .frame(width: 45, height: 45)
-                    Text(mediaContainer?.title ?? "<Unknown>")
+                    Text(mediaContainer?.itemTitle ?? "<Unknown>")
                     Spacer()
                 }
                 .frame(minWidth: 200, minHeight: 50, maxHeight: 50)
@@ -31,7 +31,7 @@ struct BrowserListCellView: View {
                 HStack {
                     Image(systemName: "folder")
                     .frame(width: 45, height: 45)
-                    Text(mediaContainer?.title ?? "<Unknown>")
+                    Text(mediaContainer?.itemTitle ?? "<Unknown>")
                     Spacer()
                 }
                 .frame(minWidth: 200, minHeight: 50, maxHeight: 50)

@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-import upnpx
+import CocoaUPnP
 
 struct MediaItemListCellView: View {
-    var mediaItem: MediaServer1ItemObject?
+    var mediaItem: UPPMediaItem?
     
     var body: some View {
         HStack {
             VStack (alignment: .leading) {
-                Text(mediaItem?.title ?? "<Unknown>")
+                Text(mediaItem?.itemTitle ?? "<Unknown>")
                 Text(mediaItem?.artist ?? "<Unknown>")
                     .font(.caption)
             }
