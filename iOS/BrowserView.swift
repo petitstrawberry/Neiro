@@ -99,14 +99,14 @@ struct BrowserView: View {
             alertItem = AlertItem(
                 alert: Alert(
                     title: Text("完了"),
-                    message: Text("SavedServersに\(mediaServer!.friendlyName)を追加しました")
+                    message: Text("SavedServersに\"\(mediaServer!.friendlyName)\"を追加しました")
                 )
             )
         }else {
             alertItem = AlertItem(
                 alert: Alert(
                     title: Text("エラー"),
-                    message: Text("\(mediaServer!.friendlyName)は既にSavedServersに追加されています")
+                    message: Text("\"\(mediaServer!.friendlyName)\"は既にSavedServersに追加されています")
                 )
             )
         }
