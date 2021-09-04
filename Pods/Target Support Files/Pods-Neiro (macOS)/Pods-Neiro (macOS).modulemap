@@ -1,6 +1,0 @@
-framework module Pods_Neiro__macOS_ {
-  umbrella header "Pods-Neiro (macOS)-umbrella.h"
-
-  export *
-  module * { export * }
-}
