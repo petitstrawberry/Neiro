@@ -15,10 +15,10 @@ struct BrowserView: View {
     var containerObject: UPPMediaItem?
     @State var isAppeared = false
     @State var mediaObjects: [UPPMediaItem] = []
-    
+
     var body: some View {
         NavigationView {
-            
+
             List(mediaObjects.indices, id: \.self) { index in
                 // mediabjectの種類によって動作を変える
                 if mediaObjects[index].isContainer {
@@ -28,12 +28,10 @@ struct BrowserView: View {
                         destination: browserView,
                         label: {
                             BrowserListCellView(mediaContainer: mediaObjects[index])
-                                
                         }
                     )
                 }else {
                     MediaItemListCellView(mediaItem: mediaObjects[index])
-                        
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -45,11 +43,11 @@ struct BrowserView: View {
             }
         }
     }
-        
-    
+
+    // mediaObjectsの読み込みのためにcontentDirectoryのBrowseを要求
     func refreshMediaObjects() {
         print(#function)
-            
+
         if let contentDirectory = mediaServer?.contentDirectoryService() {
             contentDirectory.browse(
                 withObjectID: containerObject?.objectID ?? "0",
@@ -66,14 +64,16 @@ struct BrowserView: View {
             }
         }
     }
-        
+
+    // Browseした結果からMediaObjectsを読み込み
     func loadResults(results: [AnyHashable?]) {
         mediaObjects.removeAll()
         for result in results {
             mediaObjects.append(result as! UPPMediaItem)
         }
     }
-        
+
+    // SavedServerに追加
     func addSavedServer() {
         dump(mediaServer?.baseURL)
         userData.savedServers.append(mediaServer!)

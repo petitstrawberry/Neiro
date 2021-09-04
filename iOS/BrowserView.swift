@@ -55,9 +55,10 @@ struct BrowserView: View {
         }
     }
 
+    // mediaObjectsの読み込みのためにcontentDirectoryのBrowseを要求
     func refreshMediaObjects() {
         print(#function)
-        
+
         if let contentDirectory = mediaServer?.contentDirectoryService() {
             contentDirectory.browse(
                 withObjectID: containerObject?.objectID ?? "0",
@@ -74,20 +75,21 @@ struct BrowserView: View {
             }
         }
     }
-    
+
+    // Browseした結果からMediaObjectsを読み込み
     func loadResults(results: [AnyHashable?]) {
         mediaObjects.removeAll()
         for result in results {
             mediaObjects.append(result as! UPPMediaItem)
         }
     }
-    
+
+    // SavedServerに追加
     func addSavedServer() {
         dump(mediaServer?.baseURL)
         userData.savedServers.append(mediaServer!)
         userData.storeSavedServers()
     }
-    
 }
 
 struct BrowserView_Previews: PreviewProvider {
