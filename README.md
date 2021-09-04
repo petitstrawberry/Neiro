@@ -6,6 +6,7 @@
 
 - Xcode 12.0+
 - Cocoapods
+- macOS 11.5+
 - iOS 14.0+
 - Paid Apple developer account
   - Multicast Networking Entitlement
