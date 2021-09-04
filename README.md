@@ -1,2 +1,2 @@
 # Neiro
-平凡なMusic player app for Apple devicesになりたい
+平凡なUPnP Music player app for Apple devicesになりたい
