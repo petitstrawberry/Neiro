@@ -1,6 +1,0 @@
-framework module CocoaUPnP {
-  umbrella header "CocoaUPnP-macOS-umbrella.h"
-
-  export *
-  module * { export * }
-}
