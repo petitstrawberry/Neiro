@@ -11,24 +11,22 @@ import CocoaUPnP
 class DiscoverUPnP: NSObject, ObservableObject, UPPDiscoveryDelegate {
     @Published var upnpDevices : [UPPBasicDevice] = []
     @Published var mediaServers: [UPPMediaServerDevice] = []
-    
+
     override init() {
         super.init()
         self.scanUPnPDevices()
     }
-    
-    
-    
+
+    // UPnPデバイスのスキャンを要求
     func scanUPnPDevices() {
         print(#function)
-//        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
-        
         upnpDevices.removeAll()
         mediaServers.removeAll()
         UPPDiscovery.sharedInstance().addBrowserObserver(self)
         UPPDiscovery.sharedInstance().startBrowsing(forServices: "ssdp:all")
     }
-    
+
+    // UPPDiscoveryDelegate
     func discovery(_ discovery: UPPDiscovery, didFind device: UPPBasicDevice) {
         print(#function)
         if upnpDevices.contains(device) {
