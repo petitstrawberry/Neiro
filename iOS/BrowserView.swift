@@ -42,6 +42,7 @@ struct BrowserView: View {
             }
         }
         .navigationTitle(containerObject?.itemTitle ?? ( mediaServer?.friendlyName ?? ""))
+        .navigationBarTitleDisplayMode(.inline) // Largeタイトル時に表示が崩れるSwiftUIのバグを回避する
         .navigationBarItems(trailing: Button(action: addSavedServer, label: {
             Image(systemName: "plus")
         }))
