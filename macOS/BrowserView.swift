@@ -15,6 +15,7 @@ struct BrowserView: View {
     var containerObject: UPPMediaItem?
     @State var isAppeared = false
     @State var mediaObjects: [UPPMediaItem] = []
+    @State var alertItem: AlertItem?
 
     var body: some View {
         NavigationView {
@@ -36,6 +37,9 @@ struct BrowserView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle(mediaServer?.friendlyName ?? "")
+            .alert(item: $alertItem) { item in
+                item.alert
+            }
             .onAppear() {
                 DispatchQueue.global().async {
                     refreshMediaObjects()
@@ -76,8 +80,27 @@ struct BrowserView: View {
     // SavedServerに追加
     func addSavedServer() {
         dump(mediaServer?.baseURL)
-        userData.savedServers.append(mediaServer!)
-        userData.storeSavedServers()
+        // savedServersに登録されていなければ追加する
+        let isNotAdded = userData.savedServers.allSatisfy {
+            $0.baseURL != mediaServer?.baseURL
+        }
+        if isNotAdded {
+            userData.savedServers.append(mediaServer!)
+            userData.storeSavedServers()
+            alertItem = AlertItem(
+                alert: Alert(
+                    title: Text("完了"),
+                    message: Text("SavedServersに\(mediaServer!.friendlyName)を追加しました")
+                )
+            )
+        }else {
+            alertItem = AlertItem(
+                alert: Alert(
+                    title: Text("エラー"),
+                    message: Text("\(mediaServer!.friendlyName)は既にSavedServersに追加されています")
+                )
+            )
+        }
     }
 }
 
