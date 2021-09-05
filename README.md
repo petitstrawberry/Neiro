@@ -5,8 +5,9 @@
 ## Requirements
 
 - Xcode 12.0+
-- Cocoapods
+- macOS 11.5+
 - iOS 14.0+
-- Paid Apple developer account
-  - Multicast Networking Entitlement
-    - if you don't have this entitlement, you can't discover UPnP devices quickly.
+- Cocoapods
+- Multicast Networking Entitlement
+  - Paid Apple developer account
+  - if you don't have this entitlement, you can't discover UPnP devices quickly.
