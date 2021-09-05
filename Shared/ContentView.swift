@@ -12,23 +12,36 @@ struct ContentView: View {
     @State var selection: Int? = 0
     
     var body: some View {
-        VStack {
-            NavigationView {
-                NavigationMenuView()
-                // BrowserView()
+        let view = {
+            VStack {
+                NavigationView {
+                    NavigationMenuView()
+                    // BrowserView()
+                }
+                Spacer()
+                NowPlayingBarView()
             }
-            Spacer()
-            NowPlayingBarView()
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigation) {
-                #if os(macOS)
-                Button(action: toggleSidebar, label: {
-                    Image(systemName: "sidebar.left")
-                })
-                #endif
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    #if os(macOS)
+                    Button(action: toggleSidebar, label: {
+                        Image(systemName: "sidebar.left")
+                    })
+                    #endif
+                }
             }
         }
+        #if os(iOS)
+        if AppWindow.getSize() == .narrow {
+            view()
+                .navigationViewStyle(StackNavigationViewStyle())
+        } else {
+            view()
+                .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        }
+        #else
+        view()
+        #endif
     }
 
     func toggleSidebar() {
