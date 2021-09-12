@@ -14,6 +14,7 @@ struct NeiroApp: App {
             ContentView()
                 .environmentObject(DiscoverUPnP())
                 .environmentObject(UserDataObject())
+                .environmentObject(NowPlayingObject())
         }
     }
 }

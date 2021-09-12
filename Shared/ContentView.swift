@@ -56,5 +56,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environmentObject(DiscoverUPnP())
             .environmentObject(UserDataObject())
+            .environmentObject(NowPlayingObject())
     }
 }
