@@ -19,7 +19,6 @@ struct NowPlayingBarView: View {
                 .padding()
             Spacer()
         }
-        
     }
 }
 

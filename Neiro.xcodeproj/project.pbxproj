@@ -27,6 +27,8 @@
 		6F37B39126EDD22B007F3EA1 /* MusicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F37B39026EDD22B007F3EA1 /* MusicObject.swift */; };
 		6F37B39226EDD22B007F3EA1 /* MusicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F37B39026EDD22B007F3EA1 /* MusicObject.swift */; };
 		6F37B39426EDD5B6007F3EA1 /* NowPlayingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */; };
+		6F37B39726EDD69A007F3EA1 /* FlexibleSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 6F37B39626EDD69A007F3EA1 /* FlexibleSheet */; };
+		6F37B39926EDDA35007F3EA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F37B39826EDDA2A007F3EA1 /* ContentView.swift */; };
 		6F58E24226DCA6F500E99B98 /* MediaItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */; };
 		6F58E24326DCA88800E99B98 /* MediaItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */; };
 		6F58E24526DCABBC00E99B98 /* BrowserListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */; };
@@ -44,7 +46,6 @@
 		6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA426DB3326004A0514 /* NeiroApp.swift */; };
 		6FA93DCE26DB3327004A0514 /* NeiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA426DB3326004A0514 /* NeiroApp.swift */; };
 		6FA93DCF26DB3327004A0514 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA526DB3326004A0514 /* ContentView.swift */; };
-		6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA526DB3326004A0514 /* ContentView.swift */; };
 		6FA93DD126DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
 		6FA93DD226DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
 		6FA93DE826DB3CF6004A0514 /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */; };
@@ -86,6 +87,7 @@
 		6F37B38A26EDCE0E007F3EA1 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		6F37B38D26EDCE37007F3EA1 /* NowPlayingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingObject.swift; sourceTree = "<group>"; };
 		6F37B39026EDD22B007F3EA1 /* MusicObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicObject.swift; sourceTree = "<group>"; };
+		6F37B39826EDDA2A007F3EA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemListCellView.swift; sourceTree = "<group>"; };
 		6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserListCellView.swift; sourceTree = "<group>"; };
 		6F5E6EA626DBB9B30093CDE1 /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F37B39726EDD69A007F3EA1 /* FlexibleSheet in Frameworks */,
 				6F31293326DB60A800B6F034 /* ExternalAccessory.framework in Frameworks */,
 				6F817B3E26E46C6B0014C387 /* DeviceKit in Frameworks */,
 				6F58E24926DCAD0400E99B98 /* URLImageStore in Frameworks */,
@@ -220,7 +223,6 @@
 				6F1C0F9A26E0FB0E008E10A3 /* ObjectModels */,
 				6F31292D26DB5C4100B6F034 /* UPnP */,
 				6FA93DA426DB3326004A0514 /* NeiroApp.swift */,
-				6FA93DA526DB3326004A0514 /* ContentView.swift */,
 				6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */,
 				6F31293426DB714000B6F034 /* MediaServersListView.swift */,
 				6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */,
@@ -249,6 +251,7 @@
 				6F37B39326EDD598007F3EA1 /* NowPlayingUI */,
 				6FA93DAE26DB3327004A0514 /* Info.plist */,
 				6F1C0F8E26E071F2008E10A3 /* Settings.bundle */,
+				6FA93DA526DB3326004A0514 /* ContentView.swift */,
 				6F5E6EAB26DBBCA30093CDE1 /* BrowserView.swift */,
 				6F817B3A26E464720014C387 /* AppWindow.swift */,
 			);
@@ -259,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				6F5E6EA626DBB9B30093CDE1 /* BrowserView.swift */,
+				6F37B39826EDDA2A007F3EA1 /* ContentView.swift */,
 				6FA93DB526DB3327004A0514 /* Info.plist */,
 				6FA93DB626DB3327004A0514 /* macOS.entitlements */,
 			);
@@ -318,6 +322,7 @@
 				6F58E24A26DCAD0400E99B98 /* URLImage */,
 				6F817B3D26E46C6B0014C387 /* DeviceKit */,
 				6F37B38526EDC567007F3EA1 /* Sliders */,
+				6F37B39626EDD69A007F3EA1 /* FlexibleSheet */,
 			);
 			productName = "Neiro (iOS)";
 			productReference = 6FA93DAB26DB3327004A0514 /* Neiro.app */;
@@ -421,6 +426,7 @@
 				6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */,
 				6F817B3C26E46C6B0014C387 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 				6F37B38426EDC567007F3EA1 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+				6F37B39526EDD69A007F3EA1 /* XCRemoteSwiftPackageReference "FlexibleSheet" */,
 			);
 			productRefGroup = 6FA93DAC26DB3327004A0514 /* Products */;
 			projectDirPath = "";
@@ -597,10 +603,10 @@
 			files = (
 				6FA93DE926DB3CF6004A0514 /* NavigationMenuView.swift in Sources */,
 				6F37B38C26EDCE0E007F3EA1 /* SliderView.swift in Sources */,
+				6F37B39926EDDA35007F3EA1 /* ContentView.swift in Sources */,
 				6F37B38F26EDCE37007F3EA1 /* NowPlayingObject.swift in Sources */,
 				6F0AD2FD26E3378400BF87CD /* AlertItem.swift in Sources */,
 				6F37B39226EDD22B007F3EA1 /* MusicObject.swift in Sources */,
-				6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */,
 				6F58E24626DCABBC00E99B98 /* BrowserListCellView.swift in Sources */,
 				6F1C0F9926E0FACB008E10A3 /* UserDataObject.swift in Sources */,
 				6F5E6EAA26DBBB0E0093CDE1 /* BrowserView.swift in Sources */,
@@ -1002,6 +1008,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		6F37B39526EDD69A007F3EA1 /* XCRemoteSwiftPackageReference "FlexibleSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PetitStrawberry/FlexibleSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 		6F58E24726DCAD0400E99B98 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
@@ -1030,6 +1044,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6F37B38426EDC567007F3EA1 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
 			productName = Sliders;
+		};
+		6F37B39626EDD69A007F3EA1 /* FlexibleSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F37B39526EDD69A007F3EA1 /* XCRemoteSwiftPackageReference "FlexibleSheet" */;
+			productName = FlexibleSheet;
 		};
 		6F58E24826DCAD0400E99B98 /* URLImageStore */ = {
 			isa = XCSwiftPackageProductDependency;

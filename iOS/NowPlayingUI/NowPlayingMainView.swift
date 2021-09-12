@@ -10,6 +10,7 @@ import SwiftUI
 struct NowPlayingMainView: View {
     var body: some View {
         VStack{
+            Spacer()
             Image(systemName: "music.note.house")
                 .resizable()
                 .scaledToFit()
@@ -58,16 +59,18 @@ struct NowPlayingMainView: View {
                 }
             }
             .padding()
+            Spacer()
         }
         .foregroundColor(.white)
         .padding()
+        .background(Color.black.opacity(0.8))
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct NowPlayingMainView_Previews: PreviewProvider {
     static var previews: some View {
         NowPlayingMainView()
-            .background(Color.gray.opacity(0.8))
             .environmentObject(NowPlayingObject())
     }
 }

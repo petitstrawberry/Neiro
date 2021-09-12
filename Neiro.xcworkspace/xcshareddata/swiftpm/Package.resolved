@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "FlexibleSheet",
+        "repositoryURL": "https://github.com/PetitStrawberry/FlexibleSheet.git",
+        "state": {
+          "branch": null,
+          "revision": "4b23525655029cba76feb539dd938b13800ff070",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "Sliders",
         "repositoryURL": "https://github.com/spacenation/swiftui-sliders.git",
         "state": {

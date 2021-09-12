@@ -1,6 +1,6 @@
 //
 //  BrowserView.swift
-//  Neiro (macOS)
+//  Neiro (iOS)
 //
 //  Created by いちご on 2021/08/29.
 //
