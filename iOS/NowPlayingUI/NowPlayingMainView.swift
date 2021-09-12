@@ -36,20 +36,26 @@ struct NowPlayingMainView: View {
                 .padding(.top, 8)
             }
             HStack {
-                Image(systemName: "backward.end.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 40.0)
+                Button (action: {}){
+                    Image(systemName: "backward.end.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 40.0)
+                }
                 Spacer()
-                Image(systemName: "play.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 50)
+                Button (action: {}){
+                    Image(systemName: "play.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 50)
+                }
                 Spacer()
-                Image(systemName: "forward.end.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 40.0)
+                Button (action: {}){
+                    Image(systemName: "forward.end.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 40.0)
+                }
             }
             .padding()
         }

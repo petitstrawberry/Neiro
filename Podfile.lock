@@ -40,7 +40,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CocoaUPnP:
-    :commit: 50a06febfef72fcc2cb9cdbc845d3f743c59c9c0
+    :commit: b53c72fa1409983688ff24a926d0253438107283
     :git: https://github.com/PetitStrawberry/CocoaUPnP
 
 SPEC CHECKSUMS:

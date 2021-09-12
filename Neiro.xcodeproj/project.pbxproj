@@ -26,6 +26,7 @@
 		6F37B38F26EDCE37007F3EA1 /* NowPlayingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F37B38D26EDCE37007F3EA1 /* NowPlayingObject.swift */; };
 		6F37B39126EDD22B007F3EA1 /* MusicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F37B39026EDD22B007F3EA1 /* MusicObject.swift */; };
 		6F37B39226EDD22B007F3EA1 /* MusicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F37B39026EDD22B007F3EA1 /* MusicObject.swift */; };
+		6F37B39426EDD5B6007F3EA1 /* NowPlayingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */; };
 		6F58E24226DCA6F500E99B98 /* MediaItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */; };
 		6F58E24326DCA88800E99B98 /* MediaItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24126DCA6F500E99B98 /* MediaItemListCellView.swift */; };
 		6F58E24526DCABBC00E99B98 /* BrowserListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F58E24426DCABBC00E99B98 /* BrowserListCellView.swift */; };
@@ -46,8 +47,6 @@
 		6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DA526DB3326004A0514 /* ContentView.swift */; };
 		6FA93DD126DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
 		6FA93DD226DB3327004A0514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA93DA626DB3327004A0514 /* Assets.xcassets */; };
-		6FA93DE226DB3B75004A0514 /* NowPlayingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */; };
-		6FA93DE326DB3B75004A0514 /* NowPlayingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */; };
 		6FA93DE826DB3CF6004A0514 /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */; };
 		6FA93DE926DB3CF6004A0514 /* NavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DE726DB3CF6004A0514 /* NavigationMenuView.swift */; };
 		6FA93DEB26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA93DEA26DB4C81004A0514 /* NowPlayingBarView.swift */; };
@@ -186,8 +185,15 @@
 		6F37B38926EDCDF7007F3EA1 /* NowPlayingUI */ = {
 			isa = PBXGroup;
 			children = (
-				6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */,
 				6F37B38A26EDCE0E007F3EA1 /* SliderView.swift */,
+			);
+			path = NowPlayingUI;
+			sourceTree = "<group>";
+		};
+		6F37B39326EDD598007F3EA1 /* NowPlayingUI */ = {
+			isa = PBXGroup;
+			children = (
+				6FA93DE126DB3B75004A0514 /* NowPlayingMainView.swift */,
 			);
 			path = NowPlayingUI;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 		6FA93DAD26DB3327004A0514 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6F37B39326EDD598007F3EA1 /* NowPlayingUI */,
 				6FA93DAE26DB3327004A0514 /* Info.plist */,
 				6F1C0F8E26E071F2008E10A3 /* Settings.bundle */,
 				6F5E6EAB26DBBCA30093CDE1 /* BrowserView.swift */,
@@ -567,7 +574,6 @@
 			files = (
 				6FA93DE826DB3CF6004A0514 /* NavigationMenuView.swift in Sources */,
 				6F0AD2FC26E3378400BF87CD /* AlertItem.swift in Sources */,
-				6FA93DE226DB3B75004A0514 /* NowPlayingMainView.swift in Sources */,
 				6FA93DCF26DB3327004A0514 /* ContentView.swift in Sources */,
 				6F37B38E26EDCE37007F3EA1 /* NowPlayingObject.swift in Sources */,
 				6F58E24526DCABBC00E99B98 /* BrowserListCellView.swift in Sources */,
@@ -577,6 +583,7 @@
 				6F37B39126EDD22B007F3EA1 /* MusicObject.swift in Sources */,
 				6F5E6EAD26DBBCA70093CDE1 /* BrowserView.swift in Sources */,
 				6FA93DCD26DB3327004A0514 /* NeiroApp.swift in Sources */,
+				6F37B39426EDD5B6007F3EA1 /* NowPlayingMainView.swift in Sources */,
 				6F31292F26DB5C5A00B6F034 /* DiscoverUPnP.swift in Sources */,
 				6F31293526DB714000B6F034 /* MediaServersListView.swift in Sources */,
 				6FA93DEB26DB4C81004A0514 /* NowPlayingBarView.swift in Sources */,
@@ -592,7 +599,6 @@
 				6F37B38C26EDCE0E007F3EA1 /* SliderView.swift in Sources */,
 				6F37B38F26EDCE37007F3EA1 /* NowPlayingObject.swift in Sources */,
 				6F0AD2FD26E3378400BF87CD /* AlertItem.swift in Sources */,
-				6FA93DE326DB3B75004A0514 /* NowPlayingMainView.swift in Sources */,
 				6F37B39226EDD22B007F3EA1 /* MusicObject.swift in Sources */,
 				6FA93DD026DB3327004A0514 /* ContentView.swift in Sources */,
 				6F58E24626DCABBC00E99B98 /* BrowserListCellView.swift in Sources */,
