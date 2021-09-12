@@ -46,6 +46,8 @@ version: 2.1.2
 
 name: DeviceKit, nameSpecified: DeviceKit, owner: devicekit, version: 4.4.0
 
+name: swiftui-sliders, nameSpecified: Sliders, owner: spacenation, version: 1.0.0
+
 name: url-image, nameSpecified: URLImage, owner: dmytro-anokhin, version: 3.1.0
 
 add-version-numbers: false
