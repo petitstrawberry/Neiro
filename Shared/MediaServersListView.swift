@@ -22,27 +22,12 @@ struct MediaServersListView: View {
                 Section(header: Text("Saved Servers")){
                     ForEach(userData.savedServers, id: \.self) { savedServer in
                         NavigationLink(
-                            destination: EmptyView(),
+                            destination: BrowserView(mediaServer: savedServer),
                             label: {
                                 VStack {
-                                    Text(savedServer.url?.absoluteString ?? "")
+                                    Text(savedServer.friendlyName)
                                         .lineLimit(1)
                                 }
-//                                .onAppear() {
-//                                    let request = URLRequest(url: savedServer.url!)
-//                                    let device = BasicUPnPDevice()
-//                                    device.loadDescriptionFromXML()
-//
-//                                    let parser = BasicDeviceParser(uPnPDevice: device)
-//
-//                                    /// URLにアクセス
-//                                    URLSession.shared.dataTask(with: request) { data, response, error in
-//                                        if let data = data {
-//                                            parser?.parse(from: data)
-//                                            print(device.friendlyName)
-//                                        }
-//                                    }.resume()
-//                                }
                             }
                         ).tag(savedServer)
                     }

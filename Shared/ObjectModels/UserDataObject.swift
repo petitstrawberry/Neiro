@@ -9,7 +9,7 @@ import Foundation
 import CocoaUPnP
 
 class UserDataObject: ObservableObject {
-    @Published var savedServers:[SavedServer] = []
+    @Published var savedServers:[UPPMediaServerDevice] = []
     
     init() {
         loadAll()
@@ -21,22 +21,14 @@ class UserDataObject: ObservableObject {
 
     // savedServersの保存
     func storeSavedServers() {
-        var urls: [String] = []
-        savedServers.forEach { server in
-            if let url = server.url?.absoluteString {
-                urls.append(url)
-            }
-        }
-        UserDefaults.standard.set(urls, forKey: "savedServers")
+        let archivedData = try! NSKeyedArchiver.archivedData(withRootObject: savedServers, requiringSecureCoding: false)
+        UserDefaults.standard.set(archivedData, forKey: "savedServers")
     }
     // savedServersの読み込み
     func loadSavedServers() {
-        savedServers.removeAll()
-        if let urls = UserDefaults.standard.stringArray(forKey: "savedServers") {
-            urls.forEach { url in
-                let server = SavedServer()
-                server.url = URL(string: url)
-                savedServers.append(server)
+        if let storedData = UserDefaults.standard.object(forKey: "savedServers") as? Data {
+            if let unarchivedObject = try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(storedData) as? [UPPMediaServerDevice] {
+                savedServers = unarchivedObject
             }
         }
     }

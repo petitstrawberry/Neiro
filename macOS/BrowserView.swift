@@ -15,10 +15,11 @@ struct BrowserView: View {
     var containerObject: UPPMediaItem?
     @State var isAppeared = false
     @State var mediaObjects: [UPPMediaItem] = []
-    
+    @State var alertItem: AlertItem?
+
     var body: some View {
         NavigationView {
-            
+
             List(mediaObjects.indices, id: \.self) { index in
                 // mediabjectの種類によって動作を変える
                 if mediaObjects[index].isContainer {
@@ -28,16 +29,17 @@ struct BrowserView: View {
                         destination: browserView,
                         label: {
                             BrowserListCellView(mediaContainer: mediaObjects[index])
-                                
                         }
                     )
                 }else {
                     MediaItemListCellView(mediaItem: mediaObjects[index])
-                        
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle(mediaServer?.friendlyName ?? "")
+            .alert(item: $alertItem) { item in
+                item.alert
+            }
             .onAppear() {
                 DispatchQueue.global().async {
                     refreshMediaObjects()
@@ -45,11 +47,11 @@ struct BrowserView: View {
             }
         }
     }
-        
-    
+
+    // mediaObjectsの読み込みのためにcontentDirectoryのBrowseを要求
     func refreshMediaObjects() {
         print(#function)
-            
+
         if let contentDirectory = mediaServer?.contentDirectoryService() {
             contentDirectory.browse(
                 withObjectID: containerObject?.objectID ?? "0",
@@ -66,21 +68,38 @@ struct BrowserView: View {
             }
         }
     }
-        
+
+    // Browseした結果からMediaObjectsを読み込み
     func loadResults(results: [AnyHashable?]) {
         mediaObjects.removeAll()
         for result in results {
             mediaObjects.append(result as! UPPMediaItem)
         }
     }
-        
+
+    // SavedServerに追加
     func addSavedServer() {
         dump(mediaServer?.baseURL)
-        if let url = mediaServer?.baseURL {
-            let server = SavedServer()
-            server.url = url
-            userData.savedServers.append(server)
+        // savedServersに登録されていなければ追加する
+        let isNotAdded = userData.savedServers.allSatisfy {
+            $0.baseURL != mediaServer?.baseURL
+        }
+        if isNotAdded {
+            userData.savedServers.append(mediaServer!)
             userData.storeSavedServers()
+            alertItem = AlertItem(
+                alert: Alert(
+                    title: Text("完了"),
+                    message: Text("SavedServersに\(mediaServer!.friendlyName)を追加しました")
+                )
+            )
+        }else {
+            alertItem = AlertItem(
+                alert: Alert(
+                    title: Text("エラー"),
+                    message: Text("\(mediaServer!.friendlyName)は既にSavedServersに追加されています")
+                )
+            )
         }
     }
 }
