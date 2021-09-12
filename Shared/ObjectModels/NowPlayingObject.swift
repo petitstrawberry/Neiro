@@ -8,5 +8,6 @@
 import Foundation
 
 class NowPlayingObject: ObservableObject {
-    @Published var position: Double = 0
+    @Published var currentSong: MusicObject = MusicObject()
+    @Published var position: Double = 0.0
 }
