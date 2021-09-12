@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct NeiroApp: App {
+    @State var stateManager = StateManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(DiscoverUPnP())
                 .environmentObject(UserDataObject())
                 .environmentObject(NowPlayingObject())
+                .environmentObject(stateManager)
         }
     }
 }

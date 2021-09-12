@@ -21,7 +21,7 @@ class AppWindow: NSObject {
             if device.isPhone {
                 return .narrow
             } else {
-                if screenSize.width == windowSize!.width {
+                if screenSize.width == windowSize?.width {
                     return .wide
                 } else {
                     return .narrow

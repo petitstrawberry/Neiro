@@ -14,9 +14,9 @@ struct NowPlayingBarView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: 30, maxHeight: 30)
-                .padding()
+                .padding(.horizontal)
             Text("NowPlaying Footer")
-                .padding()
+                .padding(.horizontal)
             Spacer()
         }
     }
