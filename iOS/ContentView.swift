@@ -45,7 +45,6 @@ struct ContentView: View {
                 .bottomSheet(state: $stateManager.nowPlayingSheet, style: sheetStyle) {
                     NowPlayingMainView()
                 }
-                .animation(.none, value: geometry.size)
             }
             
             if AppWindow.getSize() == .narrow {

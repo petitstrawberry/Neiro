@@ -40,7 +40,8 @@ struct NowPlayingMainView: View {
                     }
                     Spacer()
                 }
-                .padding()
+                .padding(.horizontal, 20)
+                .padding(.vertical)
                 VStack(spacing: 0) {
                     SliderView()
                     HStack {
@@ -52,37 +53,37 @@ struct NowPlayingMainView: View {
                     }
                     .padding(.top, 8)
                 }
-                .padding()
-                HStack {
+                .padding(.horizontal, 20)
+                .padding(.vertical)
+                HStack() {
                     Button (action: {}){
                         Image(systemName: "backward.end.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 40.0)
+                            .frame(maxHeight: 30.0)
                     }
                     Spacer()
                     Button (action: {}){
                         Image(systemName: "play.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 50)
+                            .frame(maxHeight: 40)
                     }
                     Spacer()
                     Button (action: {}){
                         Image(systemName: "forward.end.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 40.0)
+                            .frame(maxHeight: 30.0)
                     }
                 }
-                .frame(maxWidth: 300)
-                .padding()
+                .frame(maxWidth: 250)
+                .padding(.horizontal, 20)
+                .padding(.vertical)
                 Spacer()
             }
-            .opacity(stateManager.nowPlayingSheet == .min ? 0 : 1.0)
         }
         .foregroundColor(.white)
-        
         .background(Color(UIColor.systemGray2))
         .edgesIgnoringSafeArea(.vertical)
     }

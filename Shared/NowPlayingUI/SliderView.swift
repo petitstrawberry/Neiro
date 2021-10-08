@@ -17,8 +17,8 @@ struct SliderView: View {
                 HorizontalValueSliderStyle(
                     track: HorizontalValueTrack(
                         view: Color.white.opacity(0.7),
-                        mask: Rectangle().cornerRadius(5.0)
-                    ).frame(height: 10),
+                        mask: Rectangle().cornerRadius(2.5)
+                    ).frame(height: 5),
                     thumbSize: CGSize(width: 0, height: 0),
                     thumbInteractiveSize: CGSize(width: 32, height: 32),
                     options: .interactiveTrack
@@ -26,10 +26,10 @@ struct SliderView: View {
             )
             .background(
                 Color.white.opacity(0.2)
-                    .frame(height: 10)
-                    .cornerRadius(5.0)
+                    .frame(height: 5)
+                    .cornerRadius(2.5)
             )
-            .frame(height: 10, alignment: .leading)
+            .frame(height: 5, alignment: .leading)
     }
 }
 
