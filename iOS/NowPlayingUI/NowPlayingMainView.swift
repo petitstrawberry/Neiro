@@ -12,75 +12,83 @@ struct NowPlayingMainView: View {
     @EnvironmentObject var stateManager: StateManager
     
     var body: some View {
-        ZStack {
-            VStack {
-                NowPlayingBarView()
-                    .frame(maxWidth: .infinity, maxHeight: 60)
-                    .background(Color(UIColor.systemGray))
-                    .onTapGesture {
-                        stateManager.nowPlayingSheet = .max
-                    }
-                Spacer()
-            }
-            .opacity(stateManager.nowPlayingSheet == .min ? 1.0 : 0)
-            
-            VStack{
-                Spacer()
-                Image(systemName: "music.note.house")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 300, maxHeight: 300)
-                HStack {
-                    VStack {
-                        Text("Title")
-                            .font(.title)
-                        Text("Artist")
-                            .font(.title2)
-                            .opacity(0.8)
-                    }
+        GeometryReader { geometry in
+            ZStack {
+                VStack {
+                    NowPlayingBarView()
+                        .frame(maxWidth: .infinity, maxHeight: 60)
+                        .background(Color(UIColor.systemGray))
+                        .onTapGesture {
+                            stateManager.nowPlayingSheet = .max
+                        }
                     Spacer()
                 }
-                .padding(.horizontal, 20)
-                .padding(.vertical)
-                VStack(spacing: 0) {
-                    SliderView()
+                .opacity(stateManager.nowPlayingSheet == .min ? 1.0 : 0)
+                
+                VStack{
+                    Spacer()
+                    Image(systemName: "music.note.house")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: geometry.size.width - 30, maxHeight: geometry.size.width - 30)
+                        .background(
+                            Color.black.opacity(0.3)
+                                .cornerRadius(10)
+                        )
+                        
+                        
                     HStack {
-                        Text("0:00")
-                            .opacity(0.8)
+                        VStack {
+                            Text("Title")
+                                .font(.title)
+                            Text("Artist")
+                                .font(.title2)
+                                .opacity(0.8)
+                        }
                         Spacer()
-                        Text("3:02")
-                            .opacity(0.8)
                     }
-                    .padding(.top, 8)
-                }
-                .padding(.horizontal, 20)
-                .padding(.vertical)
-                HStack() {
-                    Button (action: {}){
-                        Image(systemName: "backward.end.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 30.0)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical)
+                    VStack(spacing: 0) {
+                        SliderView()
+                        HStack {
+                            Text("0:00")
+                                .opacity(0.8)
+                            Spacer()
+                            Text("3:02")
+                                .opacity(0.8)
+                        }
+                        .padding(.top, 8)
                     }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical)
+                    HStack() {
+                        Button (action: {}){
+                            Image(systemName: "backward.end.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxHeight: 30.0)
+                        }
+                        Spacer()
+                        Button (action: {}){
+                            Image(systemName: "play.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxHeight: 40)
+                        }
+                        Spacer()
+                        Button (action: {}){
+                            Image(systemName: "forward.end.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxHeight: 30.0)
+                        }
+                    }
+                    .frame(maxWidth: 250)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical)
                     Spacer()
-                    Button (action: {}){
-                        Image(systemName: "play.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 40)
-                    }
-                    Spacer()
-                    Button (action: {}){
-                        Image(systemName: "forward.end.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 30.0)
-                    }
                 }
-                .frame(maxWidth: 250)
-                .padding(.horizontal, 20)
-                .padding(.vertical)
-                Spacer()
             }
         }
         .foregroundColor(.white)
