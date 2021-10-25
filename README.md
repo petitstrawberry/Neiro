@@ -10,4 +10,4 @@
 - Cocoapods
 - Multicast Networking Entitlement
   - Paid Apple developer account
-  - if you don't have this entitlement, you can't discover UPnP devices quickly.
+  - You can't discover UPnP devices quickly without this entitlement.
